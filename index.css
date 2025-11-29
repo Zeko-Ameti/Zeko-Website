@@ -1,0 +1,47 @@
+.logo-icon {
+  width: 60px; /* bigger logo */
+  height: 60px;
+}
+
+/* Logo icon bigger */
+.logo-icon {
+  width: 60px;
+  height: 60px;
+}
+
+/* Hover effects */
+.navbar-nav .nav-link {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d60000;
+  transform: translateY(-2px);
+}
+
+.dropdown-menu .dropdown-item {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #f1f1f1;
+  color: #d60000;
+}
+
+.navbar .btn-primary {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.navbar .btn-primary:hover {
+  background-color: #b30000;
+  transform: translateY(-2px);
+}
+
+.navbar .nav-link i {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar .nav-link i:hover {
+  color: #d60000;
+  transform: scale(1.2);
+}

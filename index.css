@@ -1,33 +1,49 @@
-.logo-icon {
-  width: 60px; /* bigger logo */
-  height: 60px;
-}
-
-/* Logo icon bigger */
+/* Logo icon */
 .logo-icon {
   width: 60px;
   height: 60px;
 }
 
-/* Hover effects */
+/* NAVBAR LINK HOVER EFFECTS */
 .navbar-nav .nav-link {
+  font-size: 18px !important;
+  font-weight: 500;
+  color: #fff !important;
   transition: color 0.3s, transform 0.2s;
 }
 
 .navbar-nav .nav-link:hover {
-  color: #d60000;
+  color: #ff2020 !important;
   transform: translateY(-2px);
 }
 
-.dropdown-menu .dropdown-item {
+/* ICONS */
+.navbar .nav-link i {
+  transition: color 0.3s, transform 0.2s;
+}
+
+.navbar .nav-link i:hover {
+  color: #d60000;
+  transform: scale(1.2);
+}
+
+/* DROPDOWNS */
+.dropdown-menu {
+  background: #111 !important;
+  border: 1px solid #222;
+}
+
+.dropdown-item {
+  color: white !important;
   transition: background-color 0.3s, color 0.3s;
 }
 
-.dropdown-menu .dropdown-item:hover {
-  background-color: #f1f1f1;
-  color: #d60000;
+.dropdown-item:hover {
+  background: #222 !important;
+  color: #ff2020 !important;
 }
 
+/* BUTTON */
 .navbar .btn-primary {
   transition: background-color 0.3s, transform 0.2s;
 }
@@ -37,11 +53,175 @@
   transform: translateY(-2px);
 }
 
-.navbar .nav-link i {
-  transition: color 0.3s, transform 0.2s;
+/* SEARCH BAR */
+.form-control {
+  background: #181818 !important;
+  color: white !important;
 }
 
-.navbar .nav-link i:hover {
-  color: #d60000;
-  transform: scale(1.2);
+.form-control::placeholder {
+  color: #aaa !important;
+}
+
+/* CAROUSEL WRAPPER */
+.custom-carousel {
+  border-radius: 12px;
+  overflow: hidden;
+  height: 120px; /* slightly taller for text+date */
+  background: #1a1a1a;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ff5050; /* border with different color */
+}
+
+.ticker-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.ticker-content {
+  display: flex;
+  gap: 30px;
+  animation: scroll 12s linear infinite;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: flex-start; /* align image top with text */
+  min-width: 250px;
+}
+
+.ticker-text {
+  display: flex;
+  flex-direction: column; /* text above, date below */
+  justify-content: center;
+}
+
+.ticker-headline {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: white;
+}
+
+.news-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 5px; /* aligns with first line of text */
+}
+
+/* Date style */
+.date-text {
+  font-size: 13px;
+  color: #bbb;
+  margin: 0;
+}
+
+/* TOP LABEL */
+.top-label {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #ff2020;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px; /* bigger text */
+  color: white;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pulse-icon {
+  animation: zoomPulse 1.5s infinite;
+}
+
+/* RIGHT BUTTON */
+.pause-btn-wrapper {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pause-btn {
+  background: transparent;
+  color: #1a1a1a;
+  border: none;
+  width: 35px;
+  height: 35px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ANIMATIONS */
+@keyframes zoomPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
+.carousel-glass-wrapper {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Grey glass card like navbar */
+.grey-glass-card {
+  background: #1a1a1a;
+  position: relative;
+  border: none;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Right image full half with more padding */
+.right-img-wrapper {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px 15px 20px 15px; /* top, right, bottom, left */
+}
+
+.right-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Pulse icon */
+.pulse-icon {
+  animation: pulse 1.5s infinite;
+}
+
+/* Read more hover underline */
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* Pulse keyframes */
+@keyframes pulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
